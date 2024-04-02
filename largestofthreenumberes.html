@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>largest of three numbers..</title>
+
+        <script>
+                function largest()
+                {
+                    var num1=parseInt(document.getElementById('N1').value);
+                    var num2=parseInt(document.getElementById('N2').value);
+                    var num3=parseInt(document.getElementById('N3').value);
+
+                    var largest=num1;
+
+                    if(num2 > largest)
+                    {
+                        largest=num2;
+                    }
+                    else if(num3 > largest){
+                        largest=num3;
+                    }
+
+                    document.getElementById('Res').innerHTML="The largest of three number is "+largest;
+                    
+                }
+        </script>
+    </head>
+    <body>
+        <form>
+            <label for="N1">enter the first numebr :</label>
+            <input type="number" name="N1" id="N1"><br><br>
+            <label for="N2">enter the second numebr :</label>
+            <input type="number" name="N2" id="N2"><br><br>
+            <label for="N3">enter the third numebr :</label>
+            <input type="number" name="N3" id="N3"><br><br>
+            <input type="button" value="Get result" onclick="largest()"><br><br>
+           
+            <div id="Res">
+
+            </div>
+
+        </form>
+    </body>
+</html>
